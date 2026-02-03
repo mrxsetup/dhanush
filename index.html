@@ -1,123 +1,224 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SS PREDICTION </title>
-    <!-- Existing CSS links -->
-    <!-- Head me add kare -->
-    <!-- Existing CSS and fonts -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <link href="css/all.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DHANUSH RAJA</title>
 
-    <!-- Facebook Meta Pixel -->
-    <!-- Meta Pixel Code -->
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1896030701303478');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1896030701303478&ev=PageView&noscript=1"
-/></noscript>
-    <!-- End Meta Pixel Code -->
-    <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=823691553375205&ev=PageView&noscript=1"/>
-  </noscript>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Open Sans',sans-serif;}
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+}
+.hero{
+  width:360px;
+  border-radius:22px;
+  padding:25px 15px 18px;
+  text-align:center;
+  box-shadow:0 0 45px rgba(0,212,255,.5);
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+    url("https://github.com/mrxsetup/hackerprediction/blob/main/hackerlogo.jpg?raw=true");
+  background-size:cover;
+  background-position:center;
+  animation: floatCard 4s ease-in-out infinite;
+}
+@keyframes floatCard{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+.profile-picture img{
+  height:120px;width:120px;border-radius:50%;
+  border:4px solid #00d4ff;
+  object-fit:cover;
+  box-shadow:0 0 25px #00d4ff;
+  animation:pulseGlow 2.2s infinite alternate, zoomPic 4s infinite;
+}
+@keyframes pulseGlow{
+  from{box-shadow:0 0 18px #00d4ff}
+  to{box-shadow:0 0 40px #00ffff}
+}
+@keyframes zoomPic{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.07)}
+}
+.heading1{
+  margin-top:15px;
+  font-family:'Oswald',sans-serif;
+  color:#fff;
+  letter-spacing:1px;
+}
+.subscriber-counter{
+  margin:15px 0;
+  color:#fff;
+  font-size:22px;
+  font-weight:bold;
+}
+.button{margin:16px 0;}
+.btn{
+  display:block;
+  padding:15px;
+  border-radius:14px;
+  color:#fff;
+  font-weight:bold;
+  text-decoration:none;
+  background:linear-gradient(270deg,#00c6ff,#0072ff,#00ffcc,#ff00cc);
+  background-size:600% 600%;
+  animation:gradientMove 3.5s ease infinite, zoomBtn 1.8s infinite alternate;
+  box-shadow:0 0 22px rgba(0,198,255,.9);
+  transition:.2s;
+}
+.btn:hover{transform:scale(1.07);}
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes zoomBtn{
+  from{transform:scale(1)}
+  to{transform:scale(1.05)}
+}
+.points ul{list-style:none;margin:18px 0;color:#fff;}
+.points li{margin:8px 0;}
+.trust{color:#00ffcc;font-size:14px;}
+.urgent{color:#ffcc00;font-size:15px;margin-top:6px;}
+.ads-credit{margin-top:14px;}
+.ads-credit a{
+  display:inline-block;
+  padding:6px 12px;
+  font-size:12px;
+  color:#00ffcc;
+  text-decoration:none;
+  border:1px solid rgba(0,255,204,.6);
+  border-radius:6px;
+  background:rgba(0,0,0,.55);
+}
+.ads-credit a:hover{
+  background:rgba(0,0,0,.85);
+  box-shadow:0 0 12px rgba(0,255,204,.7);
+}
+</style>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){
+n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init','1727954128132041');
+fbq('track','PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1727954128132041&ev=PageView&noscript=1"/>
+</noscript>
+
 </head>
 
-
-
-
-<!-- Meta Pixel Code -->
-
-<!-- End Meta Pixel Code -->
-
 <body>
-    <div class="hero">
-        <div class="profile-picture">
-            <img style="margin-top: -20px; height: 100px; width: 100px;" src="image.png" alt="cricket">
-        </div>
 
-        <div class="content">
-            <h1 class="heading1">👑SS PREDICTION👑</h1>
-            <div class="subscriber-counter">
-                <p id="subscriber-count" style="margin: 18px ;font-size: 25px;font-weight: bold; color: white;"><b>74,028  Subscribers</b></p>
-            </div>
-        </div>
+<div class="hero">
 
-        <br>
-        <div style="margin: 0px 15px; margin-top: -40px;" class="button">
-            <a href="https://t.me/+Pmkpdct0ZHZiYjNl" class="btn btn--stripe">
-        Join Cricket Ka Sabse Bada Tipper <i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
-        </div>
-        <div class="content-wrapper">
-            <div class="points">
-                <ul>
-                    <li><i class="fa-solid fa-share"></i> IPL - 75 / 77 PASS 🏆</li>
-                    <li><i class="fa-solid fa-share"></i> BBL - 67 / 67 PASS 🏆</li>
-                    <li><i class="fa-solid fa-share"></i> PSL - 34 / 35 PASS 🏆</li>
-                </ul>
-            </div>
-        </div>
+  <div class="profile-picture">
+    <img src="https://github.com/mrxsetup/hackerprediction/blob/main/hackerlogo.jpg?raw=true">
+  </div>
 
-        <div class="button">
-            <a href="https://t.me/+Pmkpdct0ZHZiYjNl " class="btn btn--stripe">
-        SUBSCRIBE FOR FREE <i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
-        </div>
+  <h1 class="heading1">👑 DHANUSH RAJA 👑</h1>
 
-    </div>
-    <script>
-        const targetCount = 74028; // Target subscriber count
-        const duration = 10000; // Duration of the counting effect in milliseconds (e.g., 3 seconds)
-        const displayElement = document.getElementById('subscriber-count');
+  <div class="subscriber-counter" id="subscriber-count">0+ Members</div>
 
-        let startTimestamp = null;
+  <div class="trust">✔️ 100% Free | ✔️ Trusted | ✔️ No Scam</div>
+  <div class="urgent">⏳ Join Before Match Starts</div>
 
-        function countUp(timestamp) {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = timestamp - startTimestamp;
-            const currentCount = Math.min(Math.floor((progress / duration) * targetCount), targetCount);
+  <div class="button">
+    <a href="https://t.me/+MqGWTIoYgqJhZjk1" id="joinBtn" class="btn">
+      Join Telegram Channel <i class="fa-brands fa-telegram"></i>
+    </a>
+  </div>
 
-            // Format the count with a comma for thousands and display it
-            displayElement.textContent = `${currentCount.toLocaleString()} Subscribers`;
+  <div class="points">
+    <ul>
+      <li>🏆 Accurate Predictions</li>
+      <li>🏆 Fast Updates</li>
+      <li>🏆 Trusted Source</li>
+    </ul>
+  </div>
 
-            if (currentCount < targetCount) {
-                requestAnimationFrame(countUp);
-            }
-        }
-        // Start the animation
-        requestAnimationFrame(countUp);
-    </script>
+  <div class="button">
+    <a href="https://t.me/+MqGWTIoYgqJhZjk1" id="joinBtn2" class="btn">
+      SUBSCRIBE FOR FREE <i class="fa-brands fa-telegram"></i>
+    </a>
+  </div>
+
+  <div class="ads-credit">
+    <a href="https://t.me/CAPTAIN4433" target="_blank">
+      ADS SETUP BY – @CAPTAIN4433
+    </a>
+  </div>
+
+</div>
+
+<!-- MEMBER COUNTER -->
+<script>
+const target = 60000;
+const duration = 2000;
+const el = document.getElementById("subscriber-count");
+let start = null;
+
+function animate(t){
+  if(!start) start = t;
+  let progress = t - start;
+  let count = Math.min(Math.floor((progress/duration)*target), target);
+  el.innerText = count.toLocaleString() + "+ Members";
+  if(count < target) requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
+</script>
+
+<!-- ANTI-BOT + SINGLE CLICK LEAD -->
+<script>
+let leadTracked = false;
+let pageLoadedAt = Date.now();
+
+function isBot(){
+  return (
+    navigator.webdriver ||
+    /HeadlessChrome|bot|crawler|spider|crawling/i.test(navigator.userAgent)
+  );
+}
+
+function isHuman(){
+  return (Date.now() - pageLoadedAt) > 2500;
+}
+
+function trackLeadOnce(){
+  if(isBot()) return;
+  if(!isHuman()) return;
+  if(leadTracked) return;
+
+  leadTracked = true;
+  fbq('track','Lead');
+}
+
+document.getElementById("joinBtn").addEventListener("click", trackLeadOnce);
+document.getElementById("joinBtn2").addEventListener("click", trackLeadOnce);
+</script>
 
 </body>
-
 </html>
